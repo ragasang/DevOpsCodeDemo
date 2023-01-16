@@ -10,7 +10,7 @@ pipeline{
 	    
                steps{
 		 echo 'cloning'
-                 git 'https://github.com/Sonal0409/DevOpsClassCodes.git'
+                 git 'https://github.com/ragasang/DevOpsCodeDemo.git'
               }
           }
           stage('Compile'){
@@ -45,23 +45,17 @@ pipeline{
               }
           }
 	   
-	   /*stage('Deploy'){
+	   stage('Deploy'){
 		  
               steps{
 		  
                   sh 'sudo docker build -t myimage:$BUILD_NUMBER .'
 		  sh 'sudo docker run -itd -P myimage:$BUILD_NUMBER'
               }
-          }*/
+          }
 	      
 	         
       }
-	post{
-		  
-              always{
-		  echo 'Finished'
-                  deleteDir()
-              }
-          }
+	
 			
 }
