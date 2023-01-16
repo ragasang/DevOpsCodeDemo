@@ -45,23 +45,23 @@ pipeline{
               }
           }
 	   
-	   /*stage('Deploy'){
+	   stage('Deploy'){
 		  
               steps{
 		  
                   sh 'sudo docker build -t myimage:$BUILD_NUMBER .'
 		  sh 'sudo docker run -itd -P myimage:$BUILD_NUMBER'
               }
-          }*/
+          }
 	      
 	         
       }
-	post{
+	/*post{
 		  
               always{
 		  echo 'Finished'
                   deleteDir()
               }
-          }
+          }*/
 			
 }
