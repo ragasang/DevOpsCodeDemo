@@ -44,6 +44,15 @@ pipeline{
                   sh 'mvn package'
               }
           }
+	   
+	   stage('Deploy'){
+		  
+              steps{
+		  
+                  sh 'sudo docker build -t myimage:$BUILD_NUMBER .'
+		  sh 'sudo docker run -itd -P myimage:$BUILD_NUMBER'
+              }
+          }
 	     
           
       }
