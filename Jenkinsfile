@@ -50,7 +50,7 @@ pipeline{
               steps{
 		  
                   //sh 'sudo docker build -t myimage:$BUILD_NUMBER /var/lib/jenkins/workspace/pipelineDemo/target/addressbook.war'
-		  sh 'cd /var/lib/jenkins/workspace/pipelineDemo/'
+		  sh 'cd /var/lib/jenkins/workspace/PipelineDemo1/target/'
 		  sh 'echo ***successs*****'
 		  sh 'pwd'
 		  sh 'ls'
