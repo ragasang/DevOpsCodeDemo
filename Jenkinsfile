@@ -49,7 +49,8 @@ pipeline{
 		  
               steps{
 		  
-                  sh 'sudo docker build -t myimage:$BUILD_NUMBER /var/lib/jenkins/workspace/pipelineDemo/target/addressbook.war'
+                  //sh 'sudo docker build -t myimage:$BUILD_NUMBER /var/lib/jenkins/workspace/pipelineDemo/target/addressbook.war'
+		  sh 'sudo docker build -t myimage:$BUILD_NUMBER .'
 		  sh 'sudo docker run -itd -P myimage:$BUILD_NUMBER'
               }
           }
