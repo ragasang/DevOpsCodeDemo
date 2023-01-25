@@ -54,7 +54,7 @@ pipeline{
 		  sh 'echo ***successs*****'
 		  sh 'pwd'
 		  sh 'ls'
-		  sh 'sudo docker build -t myimage:$BUILD_NUMBER .'
+		  sh 'sudo docker build -t myimage:$BUILD_NUMBER dockerfile'
 		  sh 'echo *****passed******'
 		  sh 'sudo docker run -itd -P myimage:$BUILD_NUMBER'
               }
